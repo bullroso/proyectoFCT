@@ -1,4 +1,16 @@
 agm-map {
     height: 600px;
-    with: 100%;
+    width: 100%;
   }
+#datos {
+  width: 400px;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+#button {
+  padding-left: 5%;
+}
+#emailHelp {
+  padding-left: 5pt;
+  max-width: 80%;
+}

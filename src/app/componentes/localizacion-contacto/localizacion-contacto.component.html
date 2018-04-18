@@ -7,11 +7,9 @@
     </agm-marker>
   </agm-map>
 </div>
-
-<div>
     <div class="card border-primary mb-3" style="width: 100%;">
-      <div class="row"></div>
-        <div class="card-body">
+      <div class="row">
+        <div class="card-body" id="datos">
           <h4 class="card-title" Style ="color: #2780E3" ><b>Datos de contacto</b></h4>
           <p class="card-text">
             13004 Ciudad Real
@@ -27,8 +25,32 @@
             Email: oficina@asensioabogados.net
           </p>
         </div>
-        <div class="card border-primary mb-3">
-          <h4 class="card-title" Style ="color: #2780E3" ><b>Formulario de contacto</b></h4>
+        <div class="card-body" id="datos">
+          <form (ngSubmit)="onSubmit(ContactModel);" #contactModel="ngForm">
+            <fieldset>
+              <h4 class="card-title" Style ="color: #2780E3" ><b>Formulario de contacto</b></h4>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Su Email</label>
+                <input matInput type="text" maxlength="80" #email [(ngModel)]='Contact.email' name="email" class="form-control" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Su Numero de telefono</label>
+                <input matInput type="number" maxlength="16" #telefono [(ngModel)]="Contact.telefono" name="telefono" class="form-control" placeholder="Telefono" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Su nombre</label>
+                <input matInput type="text" maxlength="80" #nombre [(ngModel)]="Contact.name" name="name" class="form-control" placeholder="Nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleTextarea">Mensaje</label>
+                <textarea matInput maxlength="300" #texto [(ngModel)]="Contact.text" name="text" class="form-control" id="exampleTextarea" rows="3"></textarea>
+              </div>
+              <div class="row" id="button">
+                <button type="submit" class="btn btn-primary"  [disabled]="!contactForm.form.valid">Enviar</button>
+                <small id="emailHelp" class="form-text text-muted">Su informacion personal nunca sera revelada con nadie más.</small>
+              </div>
+            </fieldset>
+          </form>
         </div>
       </div>
-  </div>
+    </div>
