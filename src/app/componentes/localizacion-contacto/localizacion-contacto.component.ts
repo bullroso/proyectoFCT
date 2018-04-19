@@ -30,8 +30,8 @@ constructor(private sendServices: SendEmailService, public snackBar: MatSnackBar
   ngOnInit() {
   }
   onSubmit(f: NgForm) {
-    console.log(this.Contact.name);
-    // this.getSentServices(this.Contact, f);
+    // console.log(this.Contact.name);
+    this.getSentServices(this.Contact, f);
 }
 
 // metodo de services
@@ -39,17 +39,17 @@ getSentServices(body: ContactModel, f: NgForm) {
   this.sendServices.getResponseEmail(body).subscribe(
       data => {
           if (data) {
-              this.snackBar.open('Gracias por el mensaje', 'Correcto', {
+              this.snackBar.open('Su mensaje ha sido enviado correctamente', 'OK', {
                   duration: 2000,
                 });
                 f.reset();
           } else {
-              this.snackBar.open(':(', 'Error', {
+              this.snackBar.open('Algo fallo, lo siento, pruebe a contactarnos desde su proveedor de correo', 'Error', {
                   duration: 2000,
                 });
           }
       },
-      err => { this.snackBar.open('Algo fallo :/, correo: cesar@unprogramador.com', 'ups', {
+      err => { this.snackBar.open('Algo fallo, lo siento, pruebe a contactarnos desde su proveedor de correo', 'ups', {
           duration: 5000,
         }); }
     );

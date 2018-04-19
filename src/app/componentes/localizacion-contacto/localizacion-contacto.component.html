@@ -46,7 +46,7 @@
                 <textarea matInput maxlength="300" #texto [(ngModel)]="Contact.text" name="text" class="form-control" id="exampleTextarea" rows="3"></textarea>
               </div>
               <div class="row" id="button">
-                <button type="submit" class="btn btn-primary"  [disabled]="!contactForm.form.valid">Enviar</button>
+                <button type="submit" class="btn btn-primary"  [disabled]="!contactModel.form.valid">Enviar</button>
                 <small id="emailHelp" class="form-text text-muted">Su informacion personal nunca sera revelada con nadie más.</small>
               </div>
             </fieldset>

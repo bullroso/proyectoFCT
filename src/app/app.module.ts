@@ -15,9 +15,11 @@ import { AgmCoreModule } from '@agm/core';
 import { MatSnackBarModule } from '@angular/material';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { NoticiasComponent } from './componentes/noticias/noticias.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // importar el modulo de form
 import { FormsModule } from '@angular/forms';
 import { LocalizacionContactoComponent } from './componentes/localizacion-contacto/localizacion-contacto.component';
+import { ServiciosComponent } from './componentes/servicios/servicios.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +27,13 @@ import { LocalizacionContactoComponent } from './componentes/localizacion-contac
     HeaderComponent,
     HomeComponent,
     NoticiasComponent,
-    LocalizacionContactoComponent
+    LocalizacionContactoComponent,
+    ServiciosComponent
   ],
   imports: [
     BrowserModule,
     WEB_ROUTING,
+    BrowserAnimationsModule,
     HttpClientModule,
     MatSnackBarModule,
     FormsModule,

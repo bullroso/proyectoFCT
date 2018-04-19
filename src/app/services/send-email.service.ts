@@ -17,7 +17,7 @@ export class SendEmailService {
     //   console.log(data);
     //   this.type = JSON.stringify(data);
     // });
-    return this.http.post('/send.php', _body);
+    return this.http.post('./send.php', _body);
   }
 
 }
