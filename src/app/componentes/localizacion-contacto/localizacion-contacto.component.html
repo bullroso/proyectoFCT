@@ -26,7 +26,7 @@
           </p>
         </div>
         <div class="card-body" id="datos">
-          <form (ngSubmit)="onSubmit(ContactModel);" #contactModel="ngForm">
+          <form (ngSubmit)="onSubmit(model);" #model="ngForm">
             <fieldset>
               <h4 class="card-title" Style ="color: #2780E3" ><b>Formulario de contacto</b></h4>
               <div class="form-group">
@@ -46,7 +46,7 @@
                 <textarea matInput maxlength="300" #texto [(ngModel)]="Contact.text" name="text" class="form-control" id="exampleTextarea" rows="3"></textarea>
               </div>
               <div class="row" id="button">
-                <button type="submit" class="btn btn-primary"  [disabled]="!contactModel.form.valid">Enviar</button>
+                <button type="submit" class="btn btn-primary"  [disabled]="!model.form.valid">Enviar</button>
                 <small id="emailHelp" class="form-text text-muted">Su informacion personal nunca sera revelada con nadie más.</small>
               </div>
             </fieldset>
