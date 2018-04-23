@@ -9,6 +9,7 @@ import { SendEmailService } from './services/send-email.service';
 import { WEB_ROUTING } from './app.routes';
 
 import { AppComponent } from './app.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HeaderComponent } from './componentes/header/header.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { AgmCoreModule } from '@agm/core';
@@ -33,6 +34,7 @@ import { ServiciosComponent } from './componentes/servicios/servicios.component'
   imports: [
     BrowserModule,
     WEB_ROUTING,
+    CarouselModule.forRoot(),
     BrowserAnimationsModule,
     HttpClientModule,
     MatSnackBarModule,
