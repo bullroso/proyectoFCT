@@ -10,6 +10,7 @@ import { WEB_ROUTING } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { HeaderComponent } from './componentes/header/header.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { AgmCoreModule } from '@agm/core';
@@ -35,6 +36,7 @@ import { ServiciosComponent } from './componentes/servicios/servicios.component'
     BrowserModule,
     WEB_ROUTING,
     CarouselModule.forRoot(),
+    CollapseModule.forRoot(),
     BrowserAnimationsModule,
     HttpClientModule,
     MatSnackBarModule,

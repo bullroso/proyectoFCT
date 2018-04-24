@@ -1,15 +1,20 @@
-<carousel>
-  <slide>
-    <img src="../../../assets/img/slider/001.jpg" alt="first slide" style="display: block; width: 100%; max-height: 500px;">
-  </slide>
-  <slide>
-    <img src="../../../assets/img/slider/002.jpg" alt="second slide" style="display: block; width: 100%; max-height: 500px;">
-  </slide>
-  <slide>
-    <img src="../../../assets/img/slider/003.jpg" alt="third slide" style="display: block; width: 100%; max-height: 500px;">
-  </slide>
-</carousel>
-
+<div class="container">
+  <carousel [noPause]="noPause">
+    <slide *ngFor="let slide of slides; let index=index">
+      <img [src]="slide.image" alt="image slide">
+   
+      <div class="carousel-caption">
+        <h4>Slide {{index}}</h4>
+        <p>{{slide.text}}</p>
+      </div>
+    </slide>
+  </carousel>
+</div>
+<br>
+<button type="button" class="btn btn-info"
+          (click)="noPause = !noPause">pausar
+  </button>
+  <br><br>
 <div class="container">
   <div class="jumbotron">
     <h1 class="display-3">Noticia</h1>
