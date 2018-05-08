@@ -22,6 +22,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { LocalizacionContactoComponent } from './componentes/localizacion-contacto/localizacion-contacto.component';
 import { ServiciosComponent } from './componentes/servicios/servicios.component';
+import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
+import { LogInComponent } from './componentes/log-in/log-in.component';
+import { NoticiaComponent } from './componentes/noticia/noticia.component';
+import { NuevaNoticiaComponent } from './componentes/nueva-noticia/nueva-noticia.component';
+import { LoginGuard } from './login.guard';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,11 @@ import { ServiciosComponent } from './componentes/servicios/servicios.component'
     HomeComponent,
     NoticiasComponent,
     LocalizacionContactoComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    UsuariosComponent,
+    LogInComponent,
+    NoticiaComponent,
+    NuevaNoticiaComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +54,8 @@ import { ServiciosComponent } from './componentes/servicios/servicios.component'
   ],
   providers: [
     NoticiasService,
-    SendEmailService
+    SendEmailService,
+    LoginGuard
   ],
   bootstrap: [AppComponent]
 })
