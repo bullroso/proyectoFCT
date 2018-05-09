@@ -27,6 +27,7 @@ import { LogInComponent } from './componentes/log-in/log-in.component';
 import { NoticiaComponent } from './componentes/noticia/noticia.component';
 import { NuevaNoticiaComponent } from './componentes/nueva-noticia/nueva-noticia.component';
 import { LoginGuard } from './login.guard';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { LoginGuard } from './login.guard';
     UsuariosComponent,
     LogInComponent,
     NoticiaComponent,
-    NuevaNoticiaComponent
+    NuevaNoticiaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
