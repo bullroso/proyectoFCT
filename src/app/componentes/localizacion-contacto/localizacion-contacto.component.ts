@@ -7,7 +7,7 @@ import { of } from 'rxjs/observable/of';
 // material desing de angular
 import { MatSnackBar } from '@angular/material';
 // services en angular
-import { SendEmailService } from '../../services/send-email.service';
+import { SendEmailService } from '../../services/send-email/send-email.service';
 // modelo creado
 import { ContactModel } from '../../models/ContactModel';
 // Esta linea fue agregada automaticamente pueden borrarlo
@@ -36,7 +36,7 @@ constructor(private sendServices: SendEmailService, public snackBar: MatSnackBar
 
 // metodo de services
 getSentServices(body: ContactModel, f: NgForm) {
-  this.sendServices.getResponseEmail(body).subscribe(
+  this.sendServices.sendEmail(body).subscribe(
       data => {
           if (data) {
               this.snackBar.open('Su mensaje ha sido enviado correctamente', 'OK', {

@@ -30,20 +30,20 @@
             <fieldset>
               <h4 class="card-title" Style ="color: #2780E3" ><b>Formulario de contacto</b></h4>
               <div class="form-group">
-                <label for="exampleInputEmail1">Su Email</label>
+                <label for="email">Su Email</label>
                 <input matInput type="text" maxlength="80" #email [(ngModel)]='Contact.email' name="email" class="form-control" placeholder="Email" required>
               </div>
               <div class="form-group">
-                <label for="exampleInputEmail1">Su Numero de telefono</label>
+                <label for="telefone">Su Numero de telefono</label>
                 <input matInput type="number" maxlength="16" #telefono [(ngModel)]="Contact.telefono" name="telefono" class="form-control" placeholder="Telefono" required>
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Su nombre</label>
+                <label for="name">Su nombre</label>
                 <input matInput type="text" maxlength="80" #nombre [(ngModel)]="Contact.name" name="name" class="form-control" placeholder="Nombre" required>
               </div>
               <div class="form-group">
-                <label for="exampleTextarea">Mensaje</label>
-                <textarea matInput maxlength="300" #texto [(ngModel)]="Contact.text" name="text" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                <label for="message">Mensaje</label>
+                <textarea matInput maxlength="300" #texto [(ngModel)]="Contact.message" name="message" class="form-control" id="exampleTextarea" rows="3"></textarea>
               </div>
               <div class="row" id="button">
                 <button type="submit" class="btn btn-primary"  [disabled]="!model.form.valid">Enviar</button>

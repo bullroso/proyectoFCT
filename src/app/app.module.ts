@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // servicios
-import { NoticiasService } from './services/noticias.service';
-import { SendEmailService } from './services/send-email.service';
+import { NoticiasService } from './services/noticias/noticias.service';
+import { SendEmailService } from './services/send-email/send-email.service';
 
 // rutas
 import { WEB_ROUTING } from './app.routes';

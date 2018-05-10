@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // Servicios
-import { NoticiasService, NoticiasRules } from '../../services/noticias.service';
+import { NoticiasService, NoticiasRules } from '../../services/noticias/noticias.service';
 
 @Component({
   selector: 'app-noticias',
