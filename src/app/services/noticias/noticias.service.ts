@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ConnectionOptions } from 'mysql';
+import {HttpClient} from '@angular/common/http';
 
 export interface NoticiasRules {
   id: number;
@@ -10,6 +11,8 @@ export interface NoticiasRules {
 
 @Injectable()
 export class NoticiasService {
+  type: any;
+  constructor( private http: HttpClient) { }
 
   noticia: NoticiasRules[] = [
     {
@@ -32,6 +35,10 @@ export class NoticiasService {
     }
   ];
 
+  getNoticiasPHP() {
+    return this.http.get('http://www.2660323-1.web-hosting.es/listarNoticias.php');
+  }
+
   getNoticias() {
     return this.noticia;
   }
@@ -39,6 +46,4 @@ export class NoticiasService {
   getNoticia(id: number) {
     return this.getNoticias().find( noticia => noticia.id === id);
   }
-  constructor() { }
-
 }
