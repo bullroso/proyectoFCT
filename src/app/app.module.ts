@@ -15,7 +15,8 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { AgmCoreModule } from '@agm/core';
 import { MatSnackBarModule } from '@angular/material';
-import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { NoticiasComponent } from './componentes/noticias/noticias.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // importar el modulo de form
@@ -45,6 +46,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     WEB_ROUTING,
     CarouselModule.forRoot(),
     CollapseModule.forRoot(),

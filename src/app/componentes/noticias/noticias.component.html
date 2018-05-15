@@ -2,12 +2,12 @@
   <h1>Noticias</h1>
 </div>
 <div class="row">
-  <div class="card border-primary mb-3" style="max-width: 20rem;" *ngFor="let noticia of noticias">
-    <a [routerLink]="['/noticias', noticia.id]" style="text-decoration:none; color: black">
+  <div class="card border-primary mb-3" style="max-width: 20rem;" *ngFor="let item of listado">
+    <a [routerLink]="['/noticias', item.id]" style="text-decoration:none; color: black">
       <div class="card-header">Header</div>
       <div class="card-body">
-        <h4 class="card-title">{{noticia.titulo}}</h4>
-        <p class="card-text">{{noticia.descripcion}}</p>
+        <h4 class="card-title">{{item.titulo}}</h4>
+        <p class="card-text">{{item.cabecera}}</p>
       </div>
     </a>
   </div>
