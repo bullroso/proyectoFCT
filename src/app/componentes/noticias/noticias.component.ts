@@ -16,21 +16,7 @@ export class NoticiasComponent implements OnInit {
   listado;
 
   constructor(private _noticias: NoticiasService) {
-    // DB service function called
-    /*_noticias.getNoticiasPHP().subscribe(
-      (response: Response) => {
-        this.noticias = response.json();
-        this.reloadItems(this.params);
-      } ,
-      (error) => {console.log(error); }
-  );*/
   }
-
-    /*reloadItems(params) {
-    this.itemResource = new DataTableResource(this.noticias);
-    this.itemResource.count().then(count => this.itemCount = count);
-      this.itemResource.query(params).then(items => this.items = items);
-    }*/
 
     ngOnInit() {
        // this.noticias = this._noticias.getNoticias();
