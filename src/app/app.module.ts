@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 // servicios
 import { NoticiasService } from './services/noticias/noticias.service';
 import { SendEmailService } from './services/send-email/send-email.service';
+import { LoginService } from './services/login/login.service';
 
 // rutas
 import { WEB_ROUTING } from './app.routes';
@@ -59,6 +60,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
   providers: [
     NoticiasService,
     SendEmailService,
+    LoginService,
     LoginGuard
   ],
   bootstrap: [AppComponent]
