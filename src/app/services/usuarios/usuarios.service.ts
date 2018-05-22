@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { usuario } from '../../models/usuario';
 import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
 import {HttpClient} from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';

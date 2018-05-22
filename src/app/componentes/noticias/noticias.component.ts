@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {  Http, Response, Headers } from '@angular/http';
-import { DataTableResource } from 'angular-4-data-table-bootstrap-4';
 import { Noticia } from '../../models/noticia';
 
 // Servicios

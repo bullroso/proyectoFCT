@@ -54,7 +54,6 @@ import { FooterComponent } from './componentes/footer/footer.component';
     CollapseModule.forRoot(),
     BrowserAnimationsModule,
     HttpClientModule,
-    MatSnackBarModule,
     FormsModule,
     AgmCoreModule.forRoot({apiKey: 'AIzaSyDvIg4lI55V1r4QwbRFSc8_tQg9vW8tIeE' })
   ],

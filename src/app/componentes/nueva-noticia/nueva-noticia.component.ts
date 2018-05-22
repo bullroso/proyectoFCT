@@ -15,6 +15,23 @@ export class NuevaNoticiaComponent implements OnInit {
   ngOnInit() {
   }
 
+  nueva(form: NgForm) {
+    // console.log(form.valid);
+    /*let user: usuario = new usuario();
+    user.nombre = form.value.nombre;
+    user.email = form.value.email;
+    user.password = form.value.password;
+    
+    this.nuevo.insertUser(user).subscribe(
+      data => {
+          if (data) {
+              console.log('Su mensaje ha sido enviado correctamente', 'OK', {
+                  duration: 2000,
+              });
+          }
+      })*/
+    }
+
   user(form: NgForm) {
     // console.log(form.valid);
     let user: usuario = new usuario();
