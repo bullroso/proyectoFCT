@@ -1,3 +1,25 @@
-<p>
-  nueva-noticia works!
-</p>
+<div class="card border-primary mb-3" style="width: 100%;">
+    <h1>Nueva Noticia</h1>
+    <form #loginForm="ngForm" (ngSubmit)="Nueva(nuevaForm)">
+      <h4>Titulo</h4>
+      <input type="text" id="titulo" name="titulo" ngModel style="width: 100%"><br/>
+      <h4>Cabecera</h4>
+      <textarea id="texto" name="texto" rows="3" style="width: 100%;"></textarea><br/>
+      <h4>Contenido</h4>
+      <textarea id="texto" name="texto" rows="10" style="width: 100%;"></textarea><br/><br/>
+      <button type="submit">Aceptar</button>
+    </form>
+</div>
+
+<div class="card border-primary mb-3" style="width: 100%;">
+    <h1>Nuevo Usuario</h1>
+    <form #loginForm="ngForm" (ngSubmit)="user(userForm)">
+      <h4>Nombre</h4>
+      <input type="text" id="nombre" name="nombre" ngModel style="width: 100%"><br/>
+      <h4>Correo</h4>
+      <input type="text" id="correo" name="correo" ngModel style="width: 100%"><br/>
+      <h4>Contraseña</h4>
+      <input type="text" id="password" name="password" ngModel style="width: 100%"><br/>
+      <button type="submit">Aceptar</button>
+    </form>
+</div>
