@@ -25,12 +25,11 @@ Contact = new ContactModel();
 private emailResponse;
 private truefalse = false;
 
-constructor(private sendServices: SendEmailService, public snackBar: MatSnackBar) { }
+constructor(private sendServices: SendEmailService) { }
 
   ngOnInit() {
   }
   onSubmit(f: NgForm) {
-    // console.log(this.Contact.name);
     this.getSentServices(this.Contact, f);
 }
 
@@ -39,19 +38,16 @@ getSentServices(body: ContactModel, f: NgForm) {
   this.sendServices.sendEmail(body).subscribe(
       data => {
           if (data) {
-              this.snackBar.open('Su mensaje ha sido enviado correctamente', 'OK', {
+              console.log('Su mensaje ha sido enviado correctamente', 'OK', {
                   duration: 2000,
                 });
                 f.reset();
           } else {
-              this.snackBar.open('Algo fallo, lo siento, pruebe a contactarnos desde su proveedor de correo', 'Error', {
+              console.log('Algo fallo, lo siento, pruebe a contactarnos desde su proveedor de correo', 'Error', {
                   duration: 2000,
                 });
           }
-      },
-      err => { this.snackBar.open('Algo fallo, lo siento, pruebe a contactarnos desde su proveedor de correo', 'ups', {
-          duration: 5000,
-        }); }
+      }
     );
 
 }

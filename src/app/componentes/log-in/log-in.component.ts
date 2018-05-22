@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login/login.service';
+import { async } from 'q';
+
 
 @Component({
   selector: 'app-log-in',
@@ -12,23 +14,28 @@ export class LogInComponent implements OnInit {
 
   constructor(private router: Router, private log: LoginService) { }
 
+  valor: string;
+
   ngOnInit() {
   }
 
-  login(form: NgForm) {
+  async login(form: NgForm) {
     // console.log(form.valid);
 
-    let valor: string;
-    const hola = this.log.getUsers(form.value.email, form.value.password);
-    console.log('el resultado es: ', hola);
+    await this.log.getUsers(form.value.email, form.value.password).then(r => this.valor = r );
 
-    if (valor = '1') {
+    console.log(this.valor);
+    // this.comprobar();
+
+    if (this.valor == '1') {
       localStorage.setItem('email', form.value.email);
-      // this.router.navigate(['/nuevaNoticia']);
+      console.log('sesion iniciada');
+      this.router.navigate(['/nuevaNoticia']);
     }
+  }
 
-    if (form.value.email === 'ejemplo@ejemplo.com' && form.value.password === '1234' ) {
-    }
+  comprobar() {
+    console.log('el resultado es: ', this.valor);
   }
 
 }
