@@ -19,7 +19,7 @@ export class SendEmailService {
     return this.http.post('http://www.2660323-1.web-hosting.es/send.php', _body);
   }
   sendEmail(message: ContactModel): Observable<ContactModel> | any {
-    return this.http.post('http://www.2660323-1.web-hosting.es/enviar2.php', message)
+    return this.http.post('https://www.2660323-1.web-hosting.es/enviar2.php', message)
       .map(response => {
         console.log('Sending email was successfull', response);
         return response;

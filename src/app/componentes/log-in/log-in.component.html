@@ -1,5 +1,7 @@
-<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-  <input type="text" id="email" name="email" placeholder="Email" ngModel>
-  <input type="password" id="password" name="password" ngModel>
-  <button type="submit">Aceptar</button>
-</form>
+<div class="card border-primary mb-3" style="width: 100%;padding: 10px; padding-left: 30%">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <h4>Correo electronico: &nbsp;</h4><input type="text" id="email" name="email" placeholder="Email" ngModel><br/><br/>
+    <h4>Contraseña: &nbsp;</h4><input type="password" id="password" name="password" ngModel>
+    &nbsp;&nbsp;&nbsp;<button type="submit">Aceptar</button>
+  </form>
+</div>

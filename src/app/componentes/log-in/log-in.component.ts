@@ -27,7 +27,7 @@ export class LogInComponent implements OnInit {
     console.log(this.valor);
     // this.comprobar();
 
-    if (this.valor == '1') {
+    if (this.valor === '1') {
       localStorage.setItem('email', form.value.email);
       console.log('sesion iniciada');
       this.router.navigate(['/nuevaNoticia']);

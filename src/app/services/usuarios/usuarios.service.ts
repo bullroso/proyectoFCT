@@ -10,8 +10,8 @@ export class UsuariosService {
 
   constructor(private http: HttpClient) { }
 
-  insertUser(user: usuario): Observable<usuario>{
-    return this.http.post('http://www.2660323-1.web-hosting.es/insertarUsuario.php', user)
+  insertUser(user: usuario): Observable<usuario> {
+    return this.http.post('https://www.2660323-1.web-hosting.es/insertarUsuario.php', user)
       .map(response => {
         console.log('usuario añadido', response);
         return response;

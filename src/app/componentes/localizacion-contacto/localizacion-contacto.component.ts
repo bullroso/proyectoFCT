@@ -37,16 +37,7 @@ constructor(private sendServices: SendEmailService) { }
 getSentServices(body: ContactModel, f: NgForm) {
   this.sendServices.sendEmail(body).subscribe(
       data => {
-          if (data) {
-              console.log('Su mensaje ha sido enviado correctamente', 'OK', {
-                  duration: 2000,
-                });
-                f.reset();
-          } else {
-              console.log('Algo fallo, lo siento, pruebe a contactarnos desde su proveedor de correo', 'Error', {
-                  duration: 2000,
-                });
-          }
+          console.log(data);
       }
     );
 

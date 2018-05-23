@@ -1,12 +1,12 @@
 <div class="card border-primary mb-3" style="width: 100%;">
     <h1>Nueva Noticia</h1>
-    <form #nuevaForm="ngForm" (ngSubmit)="nueva(nuevaForm)">
+    <form #nuevaForm="ngForm" (ngSubmit)="Insertnueva(nuevaForm)">
         <h4>Titulo</h4>
         <input type="text" id="titulo" name="titulo" ngModel style="width: 100%"><br/>
         <h4>Cabecera</h4>
-        <textarea id="texto" name="texto" rows="3" style="width: 100%;"></textarea><br/>
+        <textarea id="cabecera" name="cabecera" [(ngModel)]="cabecera" rows="3" style="width: 100%;"></textarea><br/>
         <h4>Contenido</h4>
-        <textarea id="texto" name="texto" rows="10" style="width: 100%;"></textarea><br/><br/>
+        <textarea id="texto" name="texto" [(ngModel)]="texto" rows="10" style="width: 100%;"></textarea><br/><br/>
         <button type="submit">Aceptar</button>
     </form>
 </div>

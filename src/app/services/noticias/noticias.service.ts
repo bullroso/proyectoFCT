@@ -41,12 +41,22 @@ export class NoticiasService {
   ];
 
   getNoticiasPHP(): Observable<Noticia[]> {
-    return this.http.get('http://www.2660323-1.web-hosting.es/listarNoticias.php')
+    return this.http.get('https://www.2660323-1.web-hosting.es/listarNoticias.php')
       .do(console.log)
-      // tslint:disable
-      .map((res: Response) => res.json().then) // tslint:disable-line
-      // tslint:enable
+      .map((res: Response) => res.json().then)
       .do(console.log);
+  }
+
+  insertNoticia(noticia: Noticia) {
+    return this.http.post('https://www.2660323-1.web-hosting.es/insertarNoticias.php', noticia)
+      .map(response => {
+        console.log('noticia añadida', response);
+        return response;
+      })
+      .catch(error => {
+        console.log('error al insertar', error);
+        return Observable.throw(error);
+      });
   }
 
   getNoticias() {

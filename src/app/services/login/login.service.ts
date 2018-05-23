@@ -18,16 +18,16 @@ export class LoginService {
 
   result: string;
 
-  async getUsers(user: string, password: string){
+  async getUsers(user: string, password: string) {
     // tslint:disable-next-line:label-position
-    let result: string;
     const headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
-    let params = new HttpParams();
+    const params = new HttpParams();
     params.append('password', password);
     params.append('correo', user);
-    await this.http.post('http://www.2660323-1.web-hosting.es/login.php?correo='+user+'&password='+password, {headers: headers, search: params})
-    .toPromise().then(res => {this.result = res.valueOf().toString()});
+    await this.http.post('https://www.2660323-1.web-hosting.es/login.php?correo=' + user + '&password=' + password,
+    {headers: headers, search: params})
+    .toPromise().then(res => {this.result = res.valueOf().toString();
+    });
     return this.result;
   }
-  
 }
