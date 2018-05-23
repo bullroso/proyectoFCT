@@ -59,11 +59,31 @@ export class NoticiasService {
       });
   }
 
+  DeleteNoticia(noticia: Noticia) {
+    return this.http.post('https://www.2660323-1.web-hosting.es/EliminarNoticia.php', noticia)
+      .map(response => {
+        console.log('noticia eliminada', response);
+        return response;
+      })
+      .catch(error => {
+        console.log('error al eliminar', error);
+        return Observable.throw(error);
+      });
+  }
+
   getNoticias() {
     return this.noticia;
   }
 
-  getNoticia(id: number) {
-    return this.getNoticias().find( noticia => noticia.id === id);
+  async getNoticia(id: number): Promise<Noticia>{
+    let not;
+    await this.getNoticiasPHP().toPromise().then( noticia => noticia.forEach(function (value){
+      if(value.id == id){
+        not = value;
+      }
+    }));
+    console.log('resultado...');
+    console.log(not.titulo);
+    return not;
   }
 }

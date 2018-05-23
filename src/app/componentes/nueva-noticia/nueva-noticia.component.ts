@@ -4,6 +4,7 @@ import { Usuario } from '../../models/usuario';
 import { Noticia } from '../../models/noticia';
 import { UsuariosService } from '../../services/usuarios/usuarios.service';
 import { NoticiasService } from '../../services/noticias/noticias.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nueva-noticia',
@@ -11,11 +12,56 @@ import { NoticiasService } from '../../services/noticias/noticias.service';
   styleUrls: ['./nueva-noticia.component.css']
 })
 export class NuevaNoticiaComponent implements OnInit {
-
+    listado;
+    listadoUsuarios;
     cabecera: string;
     texto: string;
-  constructor(private usuarioNuevo: UsuariosService, private noticiaNueva: NoticiasService) { }
+  constructor(private usuarioNuevo: UsuariosService, private noticiaNueva: NoticiasService, private router: Router) { }
   ngOnInit() {
+    this.RecargarNoticias();
+    this.RecargarUsuarios();
+  }
+
+  RecargarNoticias(){
+    this.noticiaNueva.getNoticiasPHP()
+    .subscribe(
+        noticias => (this.listado = noticias)
+    ); 
+  }
+
+  RecargarUsuarios(){
+    this.usuarioNuevo.getUsuariosPHP()
+    .subscribe(
+        usuarios => (this.listadoUsuarios = usuarios)
+    ); 
+  }
+
+  EliminarNoticia(id: number){
+    const noticia: Noticia = new Noticia(id,null,null,null,null);
+    this.noticiaNueva.DeleteNoticia(noticia).subscribe(
+        data => {
+            if (data) {
+                console.log('Noticia eliminada correctamente', 'OK', {
+                    duration: 2000,
+                });
+            };
+            location.reload();
+        });
+  }
+
+  EliminarUsuario(id: number){
+    console.log(id);
+    const user: Usuario = new Usuario();
+    user.id = id;
+    this.usuarioNuevo.DeleteUsuario(user).subscribe(
+        data => {
+            if (data) {
+                console.log('Noticia eliminada correctamente', 'OK', {
+                    duration: 2000,
+                });
+            };
+            location.reload();
+        });
   }
 
   Insertnueva(form: NgForm) {
@@ -26,10 +72,11 @@ export class NuevaNoticiaComponent implements OnInit {
     this.noticiaNueva.insertNoticia(noticia).subscribe(
       data => {
           if (data) {
-              console.log('Noticia insertada correctamente', 'OK', {
+             console.log('Noticia insertada correctamente', 'OK', {
                   duration: 2000,
               });
-          }
+          };
+          location.reload();
       });
     }
 
@@ -46,7 +93,8 @@ export class NuevaNoticiaComponent implements OnInit {
               console.log('Su mensaje ha sido enviado correctamente', 'OK', {
                   duration: 2000,
               });
-          }
+          };
+          location.reload();
       });
     }
 }

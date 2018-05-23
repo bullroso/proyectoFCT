@@ -12,6 +12,14 @@
 </div>
 
 <div class="card border-primary mb-3" style="width: 100%;">
+    <h1>Administrar noticias</h1>
+    <form (ngSubmit)="EliminarNoticia(item.id)" *ngFor="let item of listado">
+        <button type="submit">Eliminar</button>&nbsp;&nbsp;&nbsp; <a [routerLink]="['/noticias', item.id]" style="text-decoration:none; color: black">{{item.titulo}} </a>
+        <br/><br/>
+    </form>
+</div>
+
+<div class="card border-primary mb-3" style="width: 100%;">
     <h1>Nuevo Usuario</h1>
     <form #userForm="ngForm" (ngSubmit)="user(userForm)">
         <h4>Nombre</h4>
@@ -21,5 +29,13 @@
         <h4>Contraseña</h4>
         <input type="text" id="password" name="password" ngModel style="width: 100%"><br/><br/>
         <button type="submit">Aceptar</button>
+    </form>
+</div>
+
+<div class="card border-primary mb-3" style="width: 100%;">
+    <h1>Administrar usuarios</h1>
+    <form (ngSubmit)="EliminarUsuario(user.id)" *ngFor="let user of listadoUsuarios">
+        <button type="submit">Eliminar</button>&nbsp;&nbsp;&nbsp; {{user.nombre}} &nbsp; {{user.correo}}
+        <br/><br/>
     </form>
 </div>
