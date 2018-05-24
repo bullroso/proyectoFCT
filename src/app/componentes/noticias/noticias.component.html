@@ -1,14 +1,14 @@
 <div class="page-header">
-  <h1>Noticias</h1>
+    <h1>Noticias</h1>
 </div>
-<div class="row">
-  <div class="card border-primary mb-3" style="max-width: 20rem;" *ngFor="let item of listado">
-    <a [routerLink]="['/noticias', item.id]" style="text-decoration:none; color: black">
-      <div class="card-header">Header</div>
-      <div class="card-body">
-        <h4 class="card-title">{{item.titulo}}</h4>
-        <p class="card-text">{{item.cabecera}}</p>
-      </div>
-    </a>
-  </div>
+
+<div class="container" *ngFor="let item of listado">
+    <div class="jumbotron" style="padding: 10px">
+        <h3 class="display-4">{{item.titulo}}</h3>
+        <p class="lead">{{item.cabecera}}</p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" [routerLink]="['/noticias', item.id]" role="button">Leer más</a>
+        </p>
+    </div>
 </div>
