@@ -1,3 +1,64 @@
-<p>
-  servicios works!
-</p>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active link" (click)="activarTab1()">Mediacion</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="activarTab2()">Areas de Practica</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="activarTab3()">Reclamaciones hipotecarias</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="activarTab4()">Asesoramiento</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="{{tab1}}" id="1" [ngClass]="{si: estadoPositivo, no: !estadoPositivo}">
+    <p>
+      AREAS DE PRÁCTICA.-
+
+RECLAMACIONES DE CANTIDAD Y EJECUCIÓN DE OBLIGACIONES, DINERARIAS O NO DINERARIAS.
+
+LESIONES Y DAÑOS DERIVADOS DE LA CIRCULACIÓN VIARIA.
+DERECHO DE SEGUROS.
+HOGAR. COMUNIDADES DE PROPIETARIOS.
+
+CLAUSULAS SUELO Y RECLAMACIÓN GASTOS HIPOTECA. CLAUSULAS ABUSIVAS.
+PROCEDIMIENTOS DE INCAPACITACIÓN CIVIL y DISPOSICIÓN DE BIENES DE MENORES O INCAPACES.
+
+MATRIMONIAL. DIVORCIOS. MUTUO ACUERDO.
+
+PROCEDIMIENTOS PENALES. JUICIOS RÁPIDOS. ALCOHOLEMIAS.
+
+INMUEBLES Y PROPIEDAD HORIZONTAL. ARRENDAMIENTOS. DESAHUCIOS.
+
+RESPONSABILIDAD CIVIL EN GENERAL.
+CONSUMIDORES Y USUARIOS.
+RESPONSABILIDAD CIVIL DE LA CONSTRUCCIÓN.
+RESPONSABILIDAD CIVIL DE PROFESIONALES.
+RECLAMACIONES POR ACCIDENTES DE TRABAJO.
+
+SUCESIONES. HERENCIAS.
+
+DERECHO LABORAL: DESPIDOS, SALARIOS, RECLAMACIONES DE CANTIDAD, PRESTACIONES.
+
+ASESORAMIENTO INMOBILIARIO. NEGOCIACIÓN Y REDACCION DE CONTRATOS.
+
+MEDIACION Y ARBITRAJE.
+
+RESPONSABILIDAD PATRIMONIAL DE LA ADMINISTRACIÓN PÚBLICA.
+
+ASESORAMIENTO A SOCIEDADES MERCANTILES. IMPUGNACIÓN DE ACUERDOS SOCIALES.
+
+    </p>
+  </div>
+  <div class="{{tab2}}" id="2">
+    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+  </div>
+  <div class="{{tab3}}" id="3">
+    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+  </div>
+  <div class="{{tab4}}" id="4">
+    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+  </div>
+</div>
