@@ -31,6 +31,7 @@ import { NoticiaComponent } from './componentes/noticia/noticia.component';
 import { NuevaNoticiaComponent } from './componentes/nueva-noticia/nueva-noticia.component';
 import { LoginGuard } from './login.guard';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { AvisoLegalComponent } from './componentes/aviso-legal/aviso-legal.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
     LogInComponent,
     NoticiaComponent,
     NuevaNoticiaComponent,
-    FooterComponent
+    FooterComponent,
+    AvisoLegalComponent
   ],
   imports: [
     BrowserModule,
