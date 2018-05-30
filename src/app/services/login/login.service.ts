@@ -24,7 +24,7 @@ export class LoginService {
     const params = new HttpParams();
     params.append('password', password);
     params.append('correo', user);
-    await this.http.post('https://www.2660323-1.web-hosting.es/login.php?correo=' + user + '&password=' + password,
+    await this.http.post('http://www.2660323-1.web-hosting.es/login.php?correo=' + user + '&password=' + password,
     {headers: headers, search: params})
     .toPromise().then(res => {this.result = res.valueOf().toString();
     });

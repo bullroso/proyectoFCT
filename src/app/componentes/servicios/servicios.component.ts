@@ -58,7 +58,7 @@ export class ServiciosComponent implements OnInit {
   mostrar() {
     this.tab1 = (this.tab1Activo) ?  this.activar : this.desactivar;
     this.tab2 = (this.tab2Activo) ?  this.activar : this.desactivar;
-    this.tab3 = (this.tab2Activo) ?  this.activar : this.desactivar;
-    this.tab4 = (this.tab2Activo) ?  this.activar : this.desactivar;
+    this.tab3 = (this.tab3Activo) ?  this.activar : this.desactivar;
+    this.tab4 = (this.tab4Activo) ?  this.activar : this.desactivar;
   }
 }

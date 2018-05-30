@@ -12,14 +12,14 @@ export class UsuariosService {
   constructor(private http: Http) { }
 
   getUsuariosPHP(): Observable<Usuario[]> {
-    return this.http.get('https://www.2660323-1.web-hosting.es/listarUsuarios.php')
+    return this.http.get('http://www.2660323-1.web-hosting.es/listarUsuarios.php')
       .do(console.log)
       .map((res: Response) => res.json().then)
       .do(console.log);
   }
 
   DeleteUsuario(usuario: Usuario) {
-    return this.http.post('https://www.2660323-1.web-hosting.es/EliminarUsuario.php', usuario)
+    return this.http.post('http://www.2660323-1.web-hosting.es/EliminarUsuario.php', usuario)
       .map(response => {
         console.log('usuario eliminada', response);
         return response;
@@ -31,7 +31,7 @@ export class UsuariosService {
   }
 
   insertUser(user: Usuario): Observable<Usuario> {
-    return this.http.post('https://www.2660323-1.web-hosting.es/insertarUsuario.php', user)
+    return this.http.post('http://www.2660323-1.web-hosting.es/insertarUsuario.php', user)
       .map(response => {
         console.log('usuario añadido', response);
         return response;
