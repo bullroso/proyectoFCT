@@ -9,11 +9,17 @@ export class ServiciosComponent implements OnInit {
 
   constructor() { }
   activar = 'tab-pane fade active show';
+  seleccionado = 'nav-link';
   desactivar = 'tab-pane fade';
+  deseleccionado = 'nav-link active link';
   tab1 =  this.activar;
+  sel1 = this.seleccionado;
   tab2 =  this.desactivar;
+  sel2 = this.deseleccionado;
   tab3 =  this.desactivar;
+  sel3 = this.deseleccionado;
   tab4 =  this.desactivar;
+  sel4 = this.deseleccionado;
   tab1Activo = true;
   tab2Activo = true;
   tab3Activo = true;
@@ -60,5 +66,9 @@ export class ServiciosComponent implements OnInit {
     this.tab2 = (this.tab2Activo) ?  this.activar : this.desactivar;
     this.tab3 = (this.tab3Activo) ?  this.activar : this.desactivar;
     this.tab4 = (this.tab4Activo) ?  this.activar : this.desactivar;
+    this.sel1 = (this.tab1Activo) ?  this.seleccionado : this.deseleccionado;
+    this.sel2 = (this.tab2Activo) ?  this.seleccionado : this.deseleccionado;
+    this.sel3 = (this.tab3Activo) ?  this.seleccionado : this.deseleccionado;
+    this.sel4 = (this.tab4Activo) ?  this.seleccionado : this.deseleccionado;
   }
 }

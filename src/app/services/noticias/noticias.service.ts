@@ -76,14 +76,12 @@ export class NoticiasService {
   }
 
   async getNoticia(id: number): Promise<Noticia> {
-    let not;
+    let not: Noticia;
     await this.getNoticiasPHP().toPromise().then( noticia => noticia.forEach(function (value) {
-      if (value.id === id) {
+      if (value.id == id) {
         not = value;
       }
     }));
-    console.log('resultado...');
-    console.log(not.titulo);
     return not;
   }
 }

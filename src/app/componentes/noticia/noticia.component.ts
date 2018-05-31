@@ -17,7 +17,7 @@ export class NoticiaComponent implements OnInit {
   async ngOnInit() {
     this.noticia = new Noticia(0,null,null,null,null);
     const id = this.route.snapshot.paramMap.get('id');
-    this.noticia = await this.noticiaService.getNoticia(Number(id));
+    this.noticia = await this.noticiaService.getNoticia(Number(16));
     let parser = new DOMParser();
     this.texto = this.noticia.texto;
   }
