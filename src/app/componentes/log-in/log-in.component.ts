@@ -32,6 +32,9 @@ export class LogInComponent implements OnInit {
       console.log('sesion iniciada');
       this.router.navigate(['/nuevaNoticia']);
     }
+    else{
+      form.reset();
+    }
   }
 
   comprobar() {

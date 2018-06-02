@@ -87,14 +87,16 @@ export class NuevaNoticiaComponent implements OnInit {
     user.email = form.value.email;
     user.password = form.value.password;
 
+    if(user.nombre.length>0 && user.email.length > 0 && user.password.length > 0){
     this.usuarioNuevo.insertUser(user).subscribe(
-      data => {
-          if (data) {
-              console.log('Su mensaje ha sido enviado correctamente', 'OK', {
-                  duration: 2000,
-              });
-          };
-          location.reload();
-      });
+        data => {
+            if (data) {
+                console.log('Su mensaje ha sido enviado correctamente', 'OK', {
+                    duration: 2000,
+                });
+            };
+            location.reload();
+        });
+        }
     }
 }
