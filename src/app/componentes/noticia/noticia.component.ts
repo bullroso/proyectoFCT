@@ -15,10 +15,9 @@ export class NoticiaComponent implements OnInit {
   constructor(private route: ActivatedRoute, private noticiaService: NoticiasService) { }
 
   async ngOnInit() {
-    this.noticia = new Noticia(0,null,null,null,null);
+    this.noticia = new Noticia(0,null,null,null,null,null);
     const id = this.route.snapshot.paramMap.get('id');
-    this.noticia = await this.noticiaService.getNoticia(Number(16));
-    let parser = new DOMParser();
+    this.noticia = await this.noticiaService.getNoticia(parseInt(id));
     this.texto = this.noticia.texto;
   }
 }
