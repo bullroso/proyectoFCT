@@ -1,7 +1,13 @@
-<div class="card border-primary mb-3" style="width: 100%;padding: 10px; padding-left: 30%">
+<div class="card border-primary mb-3" style="width: 100%;padding: 10px;">
+  <div style="width: 100%; padding-left: 30%">
   <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
     <h4>Correo electronico: &nbsp;</h4><input type="text" id="email" name="email" placeholder="Email" ngModel><br/><br/>
     <h4>Contraseña: &nbsp;</h4><input type="password" id="password" name="password" ngModel>
     &nbsp;&nbsp;&nbsp;<button type="submit">Aceptar</button>
   </form>
+</div>
+  <br/>
+  <div *ngIf="fallido" class="alert alert-dismissible alert-danger" style="min-width: 100%">
+    <strong>Error</strong> usuario o Contraseña incorrectos
+  </div>
 </div>

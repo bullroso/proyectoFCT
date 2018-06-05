@@ -15,6 +15,7 @@ export class LogInComponent implements OnInit {
   constructor(private router: Router, private log: LoginService) { }
 
   valor: string;
+  fallido = false;
 
   ngOnInit() {
   }
@@ -31,10 +32,14 @@ export class LogInComponent implements OnInit {
       localStorage.setItem('email', form.value.email);
       console.log('sesion iniciada');
       this.router.navigate(['/nuevaNoticia']);
-    }
-    else{
+    } else {
       form.reset();
+      this.fallido = true;
     }
+  }
+
+  cerrar() {
+    this.fallido = false;
   }
 
   comprobar() {
