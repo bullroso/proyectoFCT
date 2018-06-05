@@ -15,6 +15,7 @@ export class NuevaNoticiaComponent implements OnInit {
     listado;
     listadoUsuarios;
     cabecera: string;
+    cabeceraEnlace: string;
     texto: string;
   constructor(private usuarioNuevo: UsuariosService, private noticiaNueva: NoticiasService, private router: Router) { }
   ngOnInit() {
@@ -37,7 +38,7 @@ export class NuevaNoticiaComponent implements OnInit {
   }
 
   EliminarNoticia(id: number){
-    const noticia: Noticia = new Noticia(id,null,null,null,null);
+    const noticia: Noticia = new Noticia(id,null,null,null,null,null);
     this.noticiaNueva.DeleteNoticia(noticia).subscribe(
         data => {
             if (data) {
@@ -65,10 +66,7 @@ export class NuevaNoticiaComponent implements OnInit {
   }
 
   Insertnueva(form: NgForm) {
-    console.log(form.value.titulo);
-    console.log(this.cabecera);
-    console.log(this.texto);
-    const noticia: Noticia = new Noticia(0, form.value.titulo, form.value.cabecera, form.value.texto, '00/00/0000');
+    const noticia: Noticia = new Noticia(0, form.value.titulo, form.value.cabecera, form.value.texto, "vacio", '00/00/0000');
     this.noticiaNueva.insertNoticia(noticia).subscribe(
       data => {
           if (data) {
@@ -79,6 +77,19 @@ export class NuevaNoticiaComponent implements OnInit {
           location.reload();
       });
     }
+
+    Insertenlace(form: NgForm) {
+        const noticia: Noticia = new Noticia(0, form.value.titulo, form.value.cabeceraEnlace, form.value.enlace, form.value.enlace, '00/00/0000');
+        this.noticiaNueva.insertNoticia(noticia).subscribe(
+          data => {
+              if (data) {
+                 console.log('Noticia insertada correctamente', 'OK', {
+                      duration: 2000,
+                  });
+              };
+              location.reload();
+          });
+        }
 
   user(form: NgForm) {
     // console.log(form.valid);

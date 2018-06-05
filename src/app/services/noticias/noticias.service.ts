@@ -16,7 +16,7 @@ export class NoticiasService {
   type: any;
   constructor( private http: Http) { }
 
-  noticia: Noticia[] = [
+  /*noticia: Noticia[] = [
     {
       'id' : 1,
       'titulo' : 'noticia1',
@@ -38,7 +38,7 @@ export class NoticiasService {
       'texto' : 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,',
       'fecha' : '01.01.2000,'
     },
-  ];
+  ];*/
 
   getNoticiasPHP(): Observable<Noticia[]> {
     return this.http.get('http://www.2660323-1.web-hosting.es/listarNoticias.php')
@@ -72,7 +72,7 @@ export class NoticiasService {
   }
 
   getNoticias() {
-    return this.noticia;
+    //return this.noticia;
   }
 
   async getNoticia(id: number): Promise<Noticia> {

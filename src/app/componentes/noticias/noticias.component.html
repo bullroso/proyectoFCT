@@ -8,7 +8,8 @@
         <p class="lead">{{item.cabecera}}</p>
         <hr class="my-4">
         <p class="lead">
-            <a class="btn btn-primary btn-lg" [routerLink]="['/noticias', item.id]" role="button">Leer más</a>
+            <a *ngIf="!item.enlace;" class="btn btn-primary btn-lg" [routerLink]="['/noticias', item.id]" role="button" #local>Leer más</a>
+            <a *ngIf="item.enlace;" class="btn btn-primary btn-lg" href="{{item.enlace}}" role="button" #enlace>Leer más</a>
         </p>
     </div>
 </div>
