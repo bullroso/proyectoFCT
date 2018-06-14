@@ -16,6 +16,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { HeaderComponent } from './componentes/header/header.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { AgmCoreModule } from '@agm/core';
+import {HashLocationStrategy, PathLocationStrategy, LocationStrategy }  from '@angular/common';
 import { MatSnackBarModule } from '@angular/material';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
@@ -62,6 +63,7 @@ import { EquipoComponent } from './componentes/equipo/equipo.component';
     AgmCoreModule.forRoot({apiKey: 'AIzaSyDvIg4lI55V1r4QwbRFSc8_tQg9vW8tIeE' })
   ],
   providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
     NoticiasService,
     SendEmailService,
     LoginService,

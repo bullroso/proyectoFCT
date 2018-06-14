@@ -1,33 +1,35 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div id="img-responsive" style="background-color: #3a3791" class="navbar-brand" [routerLink]="['home']"><a><img src="assets/img/1.png" style="width: 100%;"></a></div>
-  <button class="navbar-toggler" style="margin-right: 20%" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
+    <div id="img-responsive" style="background-color: #3a3791" class="navbar-brand" [routerLink]="['home']">
+        <a><img src="assets/img/1.png" style="width: 100%;"></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div [collapse]="isCollapsed" class="collapse navbar-collapse" id="navbarColor01" id="opciones">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-      <li class="nav-item" [routerLinkActive]="['active']">
-        <a class="nav-link" [routerLink]="['home']">Inicio</a>
-      </li>
-      &nbsp;&nbsp;
-      <li class="nav-item" [routerLinkActive]="['active']">
-        <a class="nav-link" [routerLink]="['equipo']">Equipo</a>
-      </li>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <li class="nav-item" [routerLinkActive]="['active']">
-        <a class="nav-link" [routerLink]="['services']">Areas de práctica</a>
-      </li>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li class="nav-item" [routerLinkActive]="['active']">
-        <a class="nav-link" [routerLink]="['noticias']">Noticias</a>
-      </li>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li class="nav-item" [routerLinkActive]="['active']">
-        <a class="nav-link" [routerLink]="['localizacion']">Localización y contacto</a>
-      </li>
-    </ul>
-  </div>
+    <div [collapse]="isCollapsed" class="collapse navbar-collapse" id="navbarColor01" id="opciones">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" [routerLink]="['home']">Inicio</a>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" [routerLink]="['equipo']">Equipo</a>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" [routerLink]="['services']">Areas de práctica</a>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" [routerLink]="['noticias']">Noticias</a>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" [routerLink]="['localizacion']">Localización y contacto</a>
+                </li>
+        </ul>
+    </div>
 </nav>
 
 <p></p>
