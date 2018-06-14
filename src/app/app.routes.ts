@@ -8,6 +8,7 @@ import { ServiciosComponent } from './componentes/servicios/servicios.component'
 import { LogInComponent } from './componentes/log-in/log-in.component';
 import { NuevaNoticiaComponent } from './componentes/nueva-noticia/nueva-noticia.component';
 import { AvisoLegalComponent } from './componentes/aviso-legal/aviso-legal.component';
+import { EquipoComponent } from './componentes/equipo/equipo.component';
 import { LoginGuard } from './login.guard';
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
     {path: 'nuevaNoticia', component: NuevaNoticiaComponent, canActivate: [LoginGuard]},
     {path: 'localizacion', component: LocalizacionContactoComponent},
     {path: 'login', component: LogInComponent},
+    {path: 'equipo', component: EquipoComponent},
     {path: 'aviso', component: AvisoLegalComponent},
     {path: '**', redirectTo: 'home'}
 ];

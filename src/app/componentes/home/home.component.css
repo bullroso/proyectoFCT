@@ -1,8 +1,11 @@
 img {
-    display: block;
-    width: 100%;
+    width: 100%;    
+}
+
+#imagen {
     min-height: 500px;
     max-height: 500px;
+    display: block;
 }
 
 #eldespacho {

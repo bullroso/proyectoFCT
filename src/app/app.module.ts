@@ -32,6 +32,7 @@ import { NuevaNoticiaComponent } from './componentes/nueva-noticia/nueva-noticia
 import { LoginGuard } from './login.guard';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { AvisoLegalComponent } from './componentes/aviso-legal/aviso-legal.component';
+import { EquipoComponent } from './componentes/equipo/equipo.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AvisoLegalComponent } from './componentes/aviso-legal/aviso-legal.compo
     NoticiaComponent,
     NuevaNoticiaComponent,
     FooterComponent,
-    AvisoLegalComponent
+    AvisoLegalComponent,
+    EquipoComponent
   ],
   imports: [
     BrowserModule,

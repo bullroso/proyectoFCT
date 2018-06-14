@@ -1,27 +1,120 @@
-<div class="container">
-    <carousel [noPause]="noPause">
-        <slide *ngFor="let slide of slides; let index=index">
-            <img [src]="slide.image" alt="image slide">
+<div class="card border-primary mb-3" style="padding: 20px">
 
-            <div class="carousel-caption">
-                <h4>Slide {{index}}</h4>
-                <p>{{slide.text}}</p>
-            </div>
-        </slide>
-    </carousel>
+    <div class="container" id="img-responsive">
+            <carousel [noPause]="noPause">
+                <slide *ngFor="let slide of slides; let index=index">
+                    <img [src]="slide.image" style="max-height: 35em">
+                </slide>
+            </carousel>
+        </div>
+
+<br/>
+<div class="page-header">
+    <h1 class="card-title" Style ="color: #2780E3">El despacho</h1>
 </div>
-<br><br><br>
+<p class="card-text">
+    <b>ASENSIO ABOGADOS</b> es un despacho de abogados independiente,
+    con amplia experiencia judicial y extrajudicial en materia de seguros -en todos sus ramos-,
+    accidentes de tráfico, accidentes laborales, responsabilidad civil y patrimonial, 
+    derecho de familia, sucesiones, arrendamientos y propiedad horizontal.
+    <br/><br/>
+    El despacho nace de la experiencia profesional, desde 1983, de su fundador, 
+    LUIS FERNANDO ASENSIO MENA.
+    <br/><br/>
+    Desde su inicio, el despacho ha venido desarrollando una intensa labor en el ámbito de la responsabilidad civil, 
+    tanto derivada de la circulación vial como patrimonial.
+    <br/><br/>
+    Con el paso del tiempo, el despacho se ha ido adaptando a las necesidades planteadas por nuestros clientes, 
+    proporcionando unos servicios jurídicos multidisciplinarios basados en la experiencia, en la independencia y en la confianza, 
+    con una innegociable ética deontológica y unas tarifas muy competitivas, 
+    logrando altos niveles de satisfacción en nuestros clientes.
+    <br/><br/>
+    En nuestro despacho incentivamos la negociación como medio para la solución pacífica de los conflictos, 
+    buscando vías conciliadoras para los intereses de nuestros clientes, 
+    de manera que éstos obtengan la satisfacción de sus derechos con mayor rapidez y con ahorro de gastos; 
+    y, si finalmente esta vía no es factible, 
+    litigamos poniendo todo nuestro empeño y experiencia profesional al servicio de nuestros clientes, 
+    ofreciendo una atención personalizada y una puntual información sobre la evolución de los asuntos encomendados. 
+
+</p>
+</div>
 
 <div class="card border-primary mb-3" style="padding: 20px">
-    <div id="img-responsive"><img src="assets/img/pagina/despacho.jpg" id="eldespacho"></div>
-    <div class="page-header">
-        <h1 class="card-title" Style ="color: #2780E3">El despacho</h1>
-        <h3 class="card-title" Style ="color: #2780E3">Despacho fundado en el año 1983</h3>
+    <ul class="nav nav-tabs" style="height: 10%;">
+        <li class="nav-item">
+            <a class="{{sel1}}" (click)="activarTab1()"><img id="img-responsive" src="assets/img/homeTAB/1.jpg" style="width: 8em; height: 8em;"></a>
+        </li>
+        <li class="nav-item">
+            <a class="{{sel2}}" (click)="activarTab2()"><img id="img-responsive" src="assets/img/homeTAB/2.jpg" style="width: 8em; height: 8em;"></a>
+        </li>
+        <li class="nav-item">
+            <a class="{{sel3}}" (click)="activarTab3()"><img id="img-responsive" src="assets/img/homeTAB/3.jpg" style="width: 8em; height: 8em;"></a>
+        </li>
+        <li class="nav-item">
+            <a class="{{sel4}}" (click)="activarTab4()"><img id="img-responsive" src="assets/img/homeTAB/4.jpg" style="width: 8em; height: 8em;"></a>
+        </li>
+        <li class="nav-item">
+            <a class="{{sel5}}" (click)="activarTab5()"><img id="img-responsive" src="assets/img/homeTAB/5.jpg" style="width: 8em; height: 8em;"></a>
+        </li>
+        <li class="nav-item">
+            <a class="{{sel6}}" (click)="activarTab6()"><img id="img-responsive" src="assets/img/homeTAB/6.jpg" style="width: 8em; height: 8em;"></a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content clearfix">
+        <div class="{{tab1}}" id="1">
+            <h1 class="card-title" Style="color: #2780E3">¿HAS SUFRIDO UN ACCIDENTE DE TRÁFICO?  </h1>
+            <p>
+                Ofrecemos un asesoramiento integral a víctimas de accidentes de tráfico.
+                <br/><br/>
+                Si ha sufrido un accidente de tráfico con lesiones o cualquier otro perjuicio, o la pérdida de un familiar, no dude en consultarnos. Le informaremos sobre la mejor forma de reclamar las indemnizaciones que puedan corresponderle y sobre todos sus derechos. 
+                <br/><br/>
+                En la mayoría de ocasiones la póliza de seguro de vehículos cubre total o parcialmente los gastos derivados de nuestro asesoramiento profesional. Si así fuere, le informaremos y nosotros mismos nos ocuparemos de realizar los trámites necesarios ante la Compañía aseguradora que tenga cubierta la defensa jurídica, para que asuma nuestros honorarios.
+            </p>
+        </div>
+        <div class="{{tab2}}" id="2">
+            <h1 class="card-title" Style="color: #2780E3">DERECHO DE FAMILIA</h1>
+            <p>
+                En Asensio Abogados ofrecemos un asesoramiento profesional especializado, tanto judicial como extrajudicial, con un trato personalizado, cercano y humano -tan necesario en cuestiones tan íntimas-, basado en la dedicación y en la confianza.
+                <br/><br/>
+                Divorcios<br/>
+                Separaciones<br/>                
+                Guarda y Custodia<br/>
+                Ejecución sentencias<br/>
+                Liquidación régimen económico-matrimonial<br/>
+                Reclamación visitas abuelos<br/>
+                Modificación de medidas<br/>
+            </p>
+        </div>
+        <div class="{{tab3}}" id="3">
+            <h1 class="card-title" Style="color: #2780E3">¿HA SUFRIDO UN ACCIDENTE DE TRABAJO?</h1>
+            <p>
+                Si ha sufrido un accidente de trabajo, no dude en consultarnos. Le ayudaremos a obtener la mejor indemnización posible.
+                <br/><br/>
+                Asesoramos a víctimas de accidentes laborales para poder reclamar las indemnizaciones que les corresponda por las lesiones, secuelas, Incapacidad temporal, invalidez, gastos y daño moral que haya sufrido, responsabilidad contractual, frente a la empresa y su aseguradora.             
+            </p>
+        </div>
+        <div class="{{tab4}}" id="4">
+            <h1 class="card-title" Style="color: #2780E3">DERECHO PENAL</h1>
+            <p>
+                Le asistimos en cualquier asunto con trascendencia penal, tanto en la defensa como en la acusación: alcoholemias, conducción temeraria, daños, lesiones, estafas, delitos leves, juicios rápidos, amenazas, etc.
+                <br/><br/>
+                Responsabilidad penal del Menor         
+            </p>
+        </div>
+        <div class="{{tab5}}" id="5">
+            <h1 class="card-title" Style="color: #2780E3">  RESPONSABILIDAD CIVIL GENERAL </h1>
+            <p>
+                ¿Padece daños o perjuicios causados por otras personas, empresas o alguna Administración?
+                <br/><br/>
+                Le ayudamos a ejercer sus derechos y a reclamar la indemnización que le corresponda.              
+            </p>
+        </div>
+        <div class="{{tab6}}" id="6">
+            <h1 class="card-title" Style="color: #2780E3">DEPENDENCIA, INCAPACIDADES, TUTELA Y DISPOSICIÓN DE BIENES DE INCAPACES</h1>
+            La incapacitación de un familiar con Alzheimer u otro problema cognitivo o físico es un tema muy duro y muy difícil, pero es importante afrontarlo, ya que nuestro querido familiar sigue siendo sujeto de derechos y obligaciones y, aunque haya visto mermadas sus facultades, va a tener que seguir pagando sus impuestos (IBI, agua, basura, comunidad, …) y tendrá que administrar su patrimonio.
+            <br/><br/>
+            En Asensio Abogados le ayudamos a regularizar su situación y, en su caso, a nombrar un tutor que realice esos actos por él y en su nombre.
+        </div>
     </div>
-    <p class="card-text">
-        EL TITULAR ES LUIS FERNANDO ASENSIO MENA. DESPACHO GENERALISTA, CON AMPLIA EXPERIENCIA JUDICIAL Y EXTRAJUDICIAL EN MATERIA DE SEGUROS, DERECHO DE LA CIRCULACIÓN, RESPONSABILIDAD CIVIL Y PATRIMONIAL, ARRENDAMIENTOS
-        Y PROPIEDAD HORIZONTAL, DERECHO INMOBILIARIO, CONTRATOS. DERECHO LABORAL. HERENCIAS. DERECHO HIPOTECARIO: CLÁUSULAS SUELO, RECLAMACION DE GASTOS DE CONSTITUCIÓN DE HIPOTECAS, CLÁUSULAS ABUSIVAS. MATRIMONIAL. DIVORCIOS. MUTUO ACUERDO. INCAPACITACIÓN
-        CIVIL. DISPOSICION DE BIENES DE MENORES O INCAPACES. PREFERENCIA POR LA SOLUCIÓN PACÍFICA DE LOS CONFLICTOS, BUSCANDO VÍAS CONCILIADORAS PARA LOS INTERESES DE LOS CLIENTES, DE MANERA QUE ÉSTOS OBTENGAN LA SATISFACCIÓN DE SUS DERECHOS CON MAYOR RAPIDEZ
-        Y CON AHORRO DE GASTOS. ATENCIÓN PERSONALIZADA A LOS CLIENTES, QUE DISPONEN DE PUNTUAL INFORMACIÓN SOBRE LOS ASUNTOS ENCOMENDADOS.
-    </p>
 </div>
+

@@ -10,11 +10,11 @@
         <div class="card-body" id="datos">
             <h4 class="card-title" Style="color: #2780E3"><b>Datos de contacto</b></h4>
             <p class="card-text">
-                13004 Ciudad Real
-                <br/> Ronda Ciruela nº 5
-                <br/> Portal 4, 2ºD
-                <br/><br/> Telefono: 926 21 48 28
-                <br/> Movil: 676 47 47 04
+                13004 CIUDAD REAL
+                <br/> Ronda de Ciruela, nº 5
+                <br/> Portal 4 - 2º D
+                <br/><br/> Teléfono: 926 21 48 28
+                <br/> Móvil: 676 47 47 04
                 <br/> Fax: 926 21 95 88
                 <br/> Email: despacho@asensioabogados.net
             </p>
@@ -28,7 +28,7 @@
                         <input matInput type="text" maxlength="80" #email [(ngModel)]='Contact.email' name="email" class="form-control" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <label for="telefone">Su Numero de telefono</label>
+                        <label for="telefone">Su número de teléfono</label>
                         <input matInput type="number" maxlength="16" #telefono [(ngModel)]="Contact.telefono" name="telefono" class="form-control" placeholder="Telefono" required>
                     </div>
                     <div class="form-group">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="row" id="button">
                         <button type="submit" class="btn btn-primary" [disabled]="!model.form.valid">Enviar</button>
-                        <small id="emailHelp" class="form-text text-muted">Su informacion personal nunca sera revelada con nadie más.</small>
+                        <small id="emailHelp" class="form-text text-muted">Su informacion personal nunca sera revelada a nadie más.</small>
                     </div>
                 </fieldset>
             </form>

@@ -31,35 +31,34 @@ export class ServiciosComponent implements OnInit {
 
 
   activarTab1() {
+    this.reset();
     this.tab1Activo = true;
-    this.tab2Activo = false;
-    this.tab3Activo = false;
-    this.tab4Activo = false;
     this.mostrar();
   }
 
   activarTab2() {
-    this.tab1Activo = false;
+    this.reset();
     this.tab2Activo = true;
-    this.tab3Activo = false;
-    this.tab4Activo = false;
     this.mostrar();
   }
 
   activarTab3() {
-    this.tab1Activo = false;
-    this.tab2Activo = false;
+    this.reset();
     this.tab3Activo = true;
-    this.tab4Activo = false;
     this.mostrar();
   }
 
   activarTab4() {
+    this.reset();
+    this.tab4Activo = true;
+    this.mostrar();
+  }
+
+  reset() {
     this.tab1Activo = false;
     this.tab2Activo = false;
     this.tab3Activo = false;
-    this.tab4Activo = true;
-    this.mostrar();
+    this.tab4Activo = false;
   }
 
   mostrar() {
